@@ -1,14 +1,70 @@
--- Interaction SQL Queries (used in Python code) --
+-- Create USERS table
+CREATE TABLE USERS (
+    USER_ID INT AUTOINCREMENT PRIMARY KEY,
+    NAME VARCHAR(100),
+    EMAIL VARCHAR(100) UNIQUE,
+    PASSWORD VARCHAR(255)
+);
 
-"👇 Select a feature to navigate:",
-cur.execute("SELECT 1 FROM USERS WHERE EMAIL = %s", (email,))
-cur.execute("INSERT INTO USERS (NAME, EMAIL, PASSWORD) VALUES (%s, %s, %s)", (name, email, hashed_pw))
-cur.execute("SELECT USER_ID, NAME, PASSWORD FROM USERS WHERE EMAIL = %s", (email,))
-cur.execute("SELECT CITY, MEAL_COST, ACCOMODATION_COST, TRANSPORT_COST FROM DESTINATION")
+-- Create DESTINATION table
+CREATE TABLE DESTINATION (
+    DESTINATION_ID INT AUTOINCREMENT PRIMARY KEY,
+    CITY VARCHAR(100),
+    MEAL_COST FLOAT,
+    ACCOMODATION_COST FLOAT,
+    TRANSPORT_COST FLOAT
+);
+
+-- Create COST_PREDICTIONS table
+CREATE TABLE COST_PREDICTIONS (
+    PREDICTION_ID INT AUTOINCREMENT PRIMARY KEY,
+    USER_ID INT,
+    DESTINATION_ID INT,
+    MEAL_COST FLOAT,
+    ACCOMODATION_COST FLOAT,
+    TRANSPORT_COST FLOAT,
+    TOTAL_COST FLOAT,
+    CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Fetch user by email for login
+SELECT USER_ID, NAME, PASSWORD 
+FROM USERS 
+WHERE EMAIL = %s;
+
+-- Check if email already exists for registration
+SELECT 1 
+FROM USERS 
+WHERE EMAIL = %s;
+
+-- Register a new user
+INSERT INTO USERS (NAME, EMAIL, PASSWORD) 
+VALUES (%s, %s, %s);
+
+-- Get destination cost details
+SELECT CITY, MEAL_COST, ACCOMODATION_COST, TRANSPORT_COST 
+FROM DESTINATION;
+
+-- Get DESTINATION_ID based on city
+SELECT DESTINATION_ID 
+FROM DESTINATION 
+WHERE CITY = %s;
+
+-- Log cost prediction
 INSERT INTO COST_PREDICTIONS (
-st.session_state.selected_city = st.selectbox("Select Destination", df['CITY'].unique(), key="destination_cost")
-cur.execute("SELECT DESTINATION_ID FROM DESTINATION WHERE CITY = %s", (st.session_state.selected_city,))
-city = st.selectbox("Select Destination", df['CITY'].unique(), key="destination_rec", index=df['CITY'].tolist().index(st.session_state.selected_city) if st.session_state.selected_city in df['CITY'].values else 0)
-city = st.selectbox("Select Destination", df['CITY'].unique(), key="destination_it", index=df['CITY'].tolist().index(st.session_state.selected_city) if st.session_state.selected_city in df['CITY'].values else 0)
-"Select Your Travel Preferences",
-SELECT
+    USER_ID, DESTINATION_ID, MEAL_COST, ACCOMODATION_COST, TRANSPORT_COST, TOTAL_COST
+) VALUES (%s, %s, %s, %s, %s, %s);
+
+-- Fetch trip summaries for logged-in user
+SELECT 
+    cp.PREDICTION_ID,
+    d.CITY AS DESTINATION,
+    cp.MEAL_COST,
+    cp.ACCOMODATION_COST,
+    cp.TRANSPORT_COST,
+    cp.TOTAL_COST,
+    cp.CREATED_AT
+FROM COST_PREDICTIONS cp
+JOIN DESTINATION d ON cp.DESTINATION_ID = d.DESTINATION_ID
+WHERE cp.USER_ID = %s
+ORDER BY cp.PREDICTION_ID DESC;
