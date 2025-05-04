@@ -28,7 +28,7 @@ import json
 import streamlit.components.v1 as components
 import base64
 
-TOGETHER_API_KEY = "66f640a649d4220aa9675ae68be0e44f3f59e2971dd9848bf0c434eb3934c004"
+TOGETHER_API_KEY = ['YOUR TOGETHER_API_KEY']
 
 # Set page configuration with wide layout
 st.set_page_config(
@@ -414,7 +414,7 @@ def generate_itinerary_for_city(destination, preferences, num_days=2):
 def get_snowflake_connection():
     return snowflake.connector.connect(
         user="VISHWAJYOTHI",
-        password="310120@%reshmiVj",
+        password="********",
         account="LFUJDSM-DI50375",
         warehouse="COMPUTE_WH",
         database="TRIP_DB",
