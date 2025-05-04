@@ -1,0 +1,151 @@
+City,Meal_cost,Transport_cost,Accomodation_cost,Destination_Id
+Paris,26,65,247,1
+London,44,62,146,2
+Tokyo,20,22,274,3
+Bali,28,44,267,4
+Phuket,18,77,205,5
+Dubai,43,92,245,6
+Rome,31,31,238,7
+Barcelona,16,47,146,8
+Sydney,11,15,401,9
+Bangkok,47,38,254,10
+Istanbul,47,69,174,11
+Singapore,18,78,193,12
+New York,5,68,390,13
+Rio de Janeiro,25,71,388,14
+Cape Town,23,85,306,15
+Los Angeles,27,71,107,16
+Las Vegas,28,14,251,17
+Moscow,47,97,419,18
+Hong Kong,9,35,320,19
+Amsterdam,35,45,60,20
+Berlin,12,54,171,21
+Vienna,6,38,170,22
+Madrid,8,34,109,23
+Seoul,39,57,199,24
+Shanghai,35,51,338,25
+Mexico City,32,84,108,26
+Toronto,11,81,322,27
+San Francisco,6,21,75,28
+Miami,31,47,208,29
+Cairo,32,11,228,30
+Delhi,27,70,75,31
+Mumbai,38,97,251,32
+Bangalore,38,61,215,33
+Beijing,10,19,370,34
+Buenos Aires,10,71,229,35
+Lima,45,17,397,36
+Sao Paulo,50,69,262,37
+Hanoi,34,100,59,38
+Ho Chi Minh City,33,83,394,39
+Oslo,27,100,97,40
+Stockholm,49,76,304,41
+Helsinki,7,65,181,42
+Copenhagen,35,97,476,43
+Dublin,31,81,287,44
+Edinburgh,35,55,65,45
+Prague,13,45,391,46
+Budapest,7,20,383,47
+Warsaw,33,72,348,48
+Zurich,7,14,449,49
+Geneva,5,79,69,50
+Venice,11,14,470,51
+Milan,7,17,330,52
+Florence,10,59,487,53
+Nice,20,74,419,54
+Lyon,49,36,241,55
+Brussels,9,19,99,56
+Athens,12,78,240,57
+Santorini,12,33,472,58
+Crete,7,90,184,59
+Mykonos,35,17,223,60
+Krakow,23,10,313,61
+Ljubljana,36,50,361,62
+Dubrovnik,34,52,197,63
+Split,40,64,485,64
+Belgrade,11,20,171,65
+Sarajevo,22,77,231,66
+Reykjavik,18,10,369,67
+Doha,36,65,132,68
+Kuwait City,5,66,343,69
+Manila,34,55,345,70
+Kuala Lumpur,32,23,382,71
+Jakarta,14,28,448,72
+Taipei,39,39,93,73
+Macau,20,57,178,74
+Chengdu,47,35,366,75
+Guangzhou,50,11,161,76
+Shenzhen,31,17,189,77
+Nairobi,49,85,326,78
+Dar es Salaam,43,56,369,79
+Johannesburg,18,34,280,80
+Accra,48,66,264,81
+Casablanca,45,64,376,82
+Marrakech,50,36,148,83
+Tangier,9,87,306,84
+Fes,26,26,322,85
+Tunis,41,96,276,86
+Addis Ababa,26,83,88,87
+Algiers,10,78,450,88
+Bogotá,18,12,74,89
+Cartagena,29,68,90,90
+Medellín,22,24,386,91
+Quito,24,53,183,92
+Guayaquil,36,19,278,93
+Panama City,47,43,196,94
+Havana,45,51,481,95
+San Juan,13,48,391,96
+Montevideo,46,72,152,97
+San Salvador,34,81,452,98
+Santo Domingo,19,95,67,99
+Brisbane,30,55,194,100
+Melbourne,15,88,277,101
+Perth,29,76,489,102
+Auckland,26,47,67,103
+Wellington,7,82,269,104
+Christchurch,25,44,418,105
+Canberra,15,87,62,106
+Vancouver,48,66,232,107
+Montreal,17,53,162,108
+Calgary,50,60,147,109
+Ottawa,31,11,101,110
+Quebec City,24,83,431,111
+Winnipeg,29,30,459,112
+Halifax,50,34,402,113
+St. John's,7,42,160,114
+Managua,31,58,453,115
+San Jose,39,65,331,116
+La Paz,7,28,415,117
+Asuncion,19,26,483,118
+Santiago,20,62,352,119
+Valparaíso,19,95,235,120
+Cusco,11,41,259,121
+Machu Picchu,24,88,323,122
+Punta Cana,45,48,256,123
+Antigua,39,74,264,124
+Barbados,27,38,221,125
+Saint Lucia,23,70,171,126
+Nassau,29,61,321,127
+Kingston,42,16,343,128
+Grenada,20,42,495,129
+Belmopan,31,65,356,130
+Port-au-Prince,29,45,369,131
+Basseterre,22,22,140,132
+Castries,35,35,360,133
+Victoria,17,86,343,134
+Port Moresby,18,22,267,135
+Hobart,40,86,55,136
+Suva,12,69,314,137
+Apia,40,84,295,138
+Papeete,39,78,352,139
+Male,13,85,268,140
+Colombo,19,11,366,141
+Thimphu,46,85,162,142
+Kathmandu,22,14,187,143
+Ulaanbaatar,49,35,337,144
+Yerevan,25,55,306,145
+Tbilisi,21,14,484,146
+Baku,46,17,95,147
+Nur-Sultan,40,24,372,148
+Dushanbe,20,11,381,149
+Bishkek,28,33,284,150
